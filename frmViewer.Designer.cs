@@ -1,0 +1,167 @@
+﻿namespace ImgViewer
+{
+    partial class frmViewer
+    {
+        /// <summary>
+        /// 필수 디자이너 변수입니다.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 사용 중인 모든 리소스를 정리합니다.
+        /// </summary>
+        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form 디자이너에서 생성한 코드
+
+        /// <summary>
+        /// 디자이너 지원에 필요한 메서드입니다.
+        /// 이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewer));
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lstDir = new System.Windows.Forms.ListView();
+            this.imglstTmp = new System.Windows.Forms.ImageList(this.components);
+            this.lblPath = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tipPath = new System.Windows.Forms.ToolTip(this.components);
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(848, 561);
+            this.splitContainer1.SplitterDistance = 204;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.IsSplitterFixed = true;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.lstDir);
+            this.splitContainer2.Panel1.Controls.Add(this.lblPath);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.pictureBox1);
+            this.splitContainer2.Size = new System.Drawing.Size(200, 557);
+            this.splitContainer2.SplitterDistance = 342;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // lstDir
+            // 
+            this.lstDir.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.lstDir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstDir.Location = new System.Drawing.Point(0, 12);
+            this.lstDir.MultiSelect = false;
+            this.lstDir.Name = "lstDir";
+            this.lstDir.Size = new System.Drawing.Size(200, 330);
+            this.lstDir.SmallImageList = this.imglstTmp;
+            this.lstDir.TabIndex = 1;
+            this.lstDir.UseCompatibleStateImageBehavior = false;
+            this.lstDir.View = System.Windows.Forms.View.Details;
+            // 
+            // imglstTmp
+            // 
+            this.imglstTmp.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglstTmp.ImageStream")));
+            this.imglstTmp.TransparentColor = System.Drawing.Color.Transparent;
+            this.imglstTmp.Images.SetKeyName(0, "up.bmp");
+            this.imglstTmp.Images.SetKeyName(1, "drive.bmp");
+            this.imglstTmp.Images.SetKeyName(2, "folder.bmp");
+            // 
+            // lblPath
+            // 
+            this.lblPath.AutoSize = true;
+            this.lblPath.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPath.Location = new System.Drawing.Point(0, 0);
+            this.lblPath.Name = "lblPath";
+            this.lblPath.Size = new System.Drawing.Size(38, 12);
+            this.lblPath.TabIndex = 0;
+            this.lblPath.Text = "label1";
+            this.lblPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "드라이브 및 폴더";
+            this.columnHeader1.Width = 200;
+            // 
+            // frmViewer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(848, 561);
+            this.Controls.Add(this.splitContainer1);
+            this.Name = "frmViewer";
+            this.Text = "이미지 뷰어";
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.ListView lstDir;
+        private System.Windows.Forms.Label lblPath;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imglstTmp;
+        private System.Windows.Forms.ToolTip tipPath;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+    }
+}
+
