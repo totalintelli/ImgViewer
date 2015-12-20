@@ -51,6 +51,8 @@
             this.Name = "frmSelect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmSelect";
+            this.Load += new System.EventHandler(this.frmSelect_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picSel_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.picSel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
