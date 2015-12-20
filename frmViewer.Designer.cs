@@ -35,7 +35,7 @@
             this.lstDir = new System.Windows.Forms.ListView();
             this.imglstTmp = new System.Windows.Forms.ImageList(this.components);
             this.lblPath = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picSelect = new System.Windows.Forms.PictureBox();
             this.tipPath = new System.Windows.Forms.ToolTip(this.components);
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -45,7 +45,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -77,7 +77,7 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.pictureBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.picSelect);
             this.splitContainer2.Size = new System.Drawing.Size(200, 557);
             this.splitContainer2.SplitterDistance = 342;
             this.splitContainer2.TabIndex = 0;
@@ -95,6 +95,7 @@
             this.lstDir.TabIndex = 1;
             this.lstDir.UseCompatibleStateImageBehavior = false;
             this.lstDir.View = System.Windows.Forms.View.Details;
+            this.lstDir.DoubleClick += new System.EventHandler(this.lstDir_DoubleClick);
             // 
             // imglstTmp
             // 
@@ -115,16 +116,16 @@
             this.lblPath.Text = "label1";
             this.lblPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // picSelect
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSelect.Location = new System.Drawing.Point(12, 67);
+            this.picSelect.Name = "picSelect";
+            this.picSelect.Size = new System.Drawing.Size(100, 50);
+            this.picSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSelect.TabIndex = 0;
+            this.picSelect.TabStop = false;
             // 
             // columnHeader1
             // 
@@ -147,7 +148,7 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSelect)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,7 +159,7 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ListView lstDir;
         private System.Windows.Forms.Label lblPath;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picSelect;
         private System.Windows.Forms.ImageList imglstTmp;
         private System.Windows.Forms.ToolTip tipPath;
         private System.Windows.Forms.ColumnHeader columnHeader1;

@@ -35,7 +35,7 @@ namespace ImgViewer
             strDrives = System.IO.Directory.GetLogicalDrives();
 
             // 얻어진 드라이브 목록을 리스트뷰에 입력한다.
-            foreach ( string str in strDrives)
+            foreach (string str in strDrives)
             {
                 strTmp = str.Remove(2, 1);
                 lstDir.Items.Add(strTmp, 1);
@@ -75,5 +75,104 @@ namespace ImgViewer
             return true;
 
         }
+
+
+        // 리스트뷰 더블클릭
+        // 폴더/드라이브 변경 처리
+        private void lstDir_DoubleClick(object sender, EventArgs e)
+        {
+            int nSel;
+            String strSelText;
+            String strTmp;
+
+            // 선택된 항목의 텍스트와 인덱스를 얻는다.
+            nSel = lstDir.SelectedItems[0].Index;
+            strSelText = lstDir.SelectedItems[0].SubItems[0].Text;
+
+            m_nSelLabel = -1;
+            picSelect.Image = null;
+
+            if (nSel == 0) // 위로
+            {
+                int nStart;
+
+                nStart = lblPath.Text.LastIndexOf("\\");
+                if (nStart == -1)
+                {
+                    return;
+                }
+
+                strTmp = lblPath.Text.Remove(nStart, lblPath.Text.Length - nStart) + "\\";
+            }
+
+            else if (m_nCnt > nSel) // 드라이브 클릭
+                strTmp = strSelText + "\\";
+            else
+                strTmp = lblPath.Text + "\\" + strSelText + "\\";
+
+            // 하위 폴더들을 보여준다.
+            if (SetFolder(strTmp))
+                SetImgFile(strTmp);
+
+            // 툴팁 연결
+            tipPath.SetToolTip(lblPath, lblPath.Text);
+        }
+
+        // 그림 파일을 찾아서 보여준다.
+        private void SetImgFile(String strParentPath)
+        {
+            System.IO.DirectoryInfo dirInfo = new System.IO.DirectoryInfo(strParentPath);
+            int nCnt;
+
+            splitContainer1.Panel2.Controls.Clear();
+            nCnt = 0;
+
+            try
+            {
+                foreach (System.IO.FileInfo fileInfo in dirInfo.GetFiles("*.*"))
+                {
+                    if (IsImgFile(fileInfo.Extension))
+                    {
+                        MakePicCtrl(nCnt, fileInfo.FullName);
+                        nCnt += 1;
+                        MakeLblCtrl(nCnt, fileInfo.Name);
+                        nCnt += 1;
+                        Application.DoEvents();
+                    }
+                }
+                lblPath.Text = strParentPath.Remove(strParentPath.Length - 1, 1);
+
+            }
+            catch
+            {
+            }
+        }
+
+        // 그림 파일의 유무를 확장자로 찾는다.
+        // 반환값 : true, false
+        private bool IsImgFile(String strExi)
+        {
+            //BMP, WMF, EMF, ICO, JPG, Gif, PNG
+            String strTmp;
+            strTmp = strExi.ToUpper();
+            if (strTmp.IndexOf(".BMP") != -1)
+                return true;
+            else if (strTmp.IndexOf(".WMF") != -1)
+                return true;
+            else if (strTmp.IndexOf(".EMF") != -1)
+                return true;
+            else if (strTmp.IndexOf(".ICO") != -1)
+                return true;
+            else if (strTmp.IndexOf(".JPG") != -1)
+                return true;
+            else if (strTmp.IndexOf(".GIF") != -1)
+                return true;
+            else if (strTmp.IndexOf(".PNG") != -1)
+                return true;
+            else
+                return false;
+        }
+
     }
+            
 }
