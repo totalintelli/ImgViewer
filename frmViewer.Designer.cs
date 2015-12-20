@@ -33,11 +33,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.lstDir = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imglstTmp = new System.Windows.Forms.ImageList(this.components);
             this.lblPath = new System.Windows.Forms.Label();
             this.picSelect = new System.Windows.Forms.PictureBox();
             this.tipPath = new System.Windows.Forms.ToolTip(this.components);
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(848, 561);
-            this.splitContainer1.SplitterDistance = 204;
+            this.splitContainer1.SplitterDistance = 203;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -78,7 +78,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.picSelect);
-            this.splitContainer2.Size = new System.Drawing.Size(200, 557);
+            this.splitContainer2.Size = new System.Drawing.Size(199, 557);
             this.splitContainer2.SplitterDistance = 342;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -90,12 +90,17 @@
             this.lstDir.Location = new System.Drawing.Point(0, 12);
             this.lstDir.MultiSelect = false;
             this.lstDir.Name = "lstDir";
-            this.lstDir.Size = new System.Drawing.Size(200, 330);
+            this.lstDir.Size = new System.Drawing.Size(199, 330);
             this.lstDir.SmallImageList = this.imglstTmp;
             this.lstDir.TabIndex = 1;
             this.lstDir.UseCompatibleStateImageBehavior = false;
             this.lstDir.View = System.Windows.Forms.View.Details;
             this.lstDir.DoubleClick += new System.EventHandler(this.lstDir_DoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "드라이브 및 폴더";
+            this.columnHeader1.Width = 200;
             // 
             // imglstTmp
             // 
@@ -120,17 +125,12 @@
             // 
             this.picSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSelect.Location = new System.Drawing.Point(12, 67);
+            this.picSelect.Location = new System.Drawing.Point(11, 67);
             this.picSelect.Name = "picSelect";
             this.picSelect.Size = new System.Drawing.Size(100, 50);
             this.picSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSelect.TabIndex = 0;
             this.picSelect.TabStop = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "드라이브 및 폴더";
-            this.columnHeader1.Width = 200;
             // 
             // frmViewer
             // 
