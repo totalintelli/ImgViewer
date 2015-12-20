@@ -127,11 +127,11 @@
             // 
             // picSelect
             // 
-            this.picSelect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picSelect.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSelect.Location = new System.Drawing.Point(11, 67);
+            this.picSelect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picSelect.Location = new System.Drawing.Point(0, 0);
             this.picSelect.Name = "picSelect";
-            this.picSelect.Size = new System.Drawing.Size(100, 50);
+            this.picSelect.Size = new System.Drawing.Size(199, 211);
             this.picSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSelect.TabIndex = 0;
             this.picSelect.TabStop = false;
@@ -144,6 +144,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmViewer";
             this.Text = "이미지 뷰어";
+            this.Load += new System.EventHandler(this.frmViewer_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);

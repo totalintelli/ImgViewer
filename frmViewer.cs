@@ -20,6 +20,16 @@ namespace ImgViewer
             InitializeComponent();
         }
 
+	private void frmViewer_Load(object sender, EventArgs e)
+        {
+            SetFolder("C:\\");
+            lblPath.Text = "C:";
+            SetImgFile("C:\\");
+            m_nSelLabel = -1;
+
+            // 툴팁 연결
+            tipPath.SetToolTip(lblPath, lblPath.Text);
+        }
 
         // 드라이브 목록 얻어서 콤보박스에 입력
         // 반환값 : 드라이브 갯수
