@@ -356,6 +356,28 @@ namespace ImgViewer
             // 폼을 모달 형태로 보여준다.
             dlg.ShowDialog();
         }
+
+        // 컨트롤 인덱스에 따른 위치를 결정한다.
+        // 패널 크기에 맞춰 픽처박스 컨트롤의 위치를 재지정 한다.
+        private void MovePicCtrl()
+        {
+            int i = 0;
+            Point pos;
+
+            Control.ControlCollection myCtrl = splitContainer1.Panel2.Controls;
+
+            foreach (Control ctl in myCtrl)
+            {
+                GetPos(i, out pos);
+                ctl.Location = pos;
+                i++;
+            }
+        }
+
+        private void splitContainer1_Panel2_SizeChanged(object sender, EventArgs e)
+        {
+            MovePicCtrl();
+        }
     }
             
 }
