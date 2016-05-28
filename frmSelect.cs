@@ -18,7 +18,7 @@ namespace ImgViewer
 
         private void frmSelect_Load(object sender, EventArgs e)
         {
-            picSel.SizeMode = PictureBoxSizeMode.StretchImage;
+            picSel.SizeMode = PictureBoxSizeMode.CenterImage;
             picSel.Size = picSel.Image.Size;
         }
 
@@ -52,5 +52,7 @@ namespace ImgViewer
                 this.Size = sizeMe;
             }
         }
+
+
     }
 }

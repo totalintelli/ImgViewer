@@ -1,0 +1,9 @@
+E:\workspace\ImgViewer\ImgViewer\bin\Debug\ImgViewer.exe
+E:\workspace\ImgViewer\ImgViewer\bin\Debug\ImgViewer.pdb
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.csprojResolveAssemblyReference.cache
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.frmSelect.resources
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.frmViewer.resources
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.Properties.Resources.resources
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.csproj.GenerateResource.Cache
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.exe
+E:\workspace\ImgViewer\ImgViewer\obj\x86\Debug\ImgViewer.pdb
